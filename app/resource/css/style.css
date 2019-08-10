@@ -1,54 +1,54 @@
-@charset "UTF-8";
+
 
 body {
     background-color: rgb(245, 240, 240);
     padding: 80px 0 0 0;
+    position: relative;
 }
 body,input,button {
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;    
 }
 
-header {
+#myHeader {
     width: 100%;
-    height: 80px;
+    height: 8%;
     position: fixed;
-    padding: 15px 0 0 1px ;
     top: 0;
     left: 0;
-    z-index: 5;
-    background: rgb(166, 221, 166);
+    background: rgb(38, 152, 228);
     box-shadow: 0px 2px 4px rgba(44, 62, 88, 0.15);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-top: 1.5em;
+    
 }
 
- header input {
-    margin-left: 0.5em;
+#input-add-btn{
+    position: relative;
+}
+
+ #itemInput{
+
+
+    margin-left: 1em;
     margin-right: 2em;
-    width: 100%;
-    height: 50px;
-    float: left;
+    width: 60%;
+    height: 2em;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     border:0px;
-    padding: 0px 250px 0 0;
+    text-indent: 1.5em;
+    padding-right:2em;
+    color:#fff;
     box-shadow: none;
     outline: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    color:#fff;
     font-size: 15px;
     font-weight: 400;
-    text-indent: 18px;
-    position: absolute;
-
-    appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none;
-}
+    -moz-appearance: none; 
+    position: fixed;
+    
+ }
 
 header input::-webkit-input-placeholder{
     color: rgba(255, 255, 255, 0.75);
@@ -66,180 +66,132 @@ header input::-ms-input-placeholder{
     color: rgba(255, 255, 255, 0.75);
 }
 
-header button {
-    width: 50px;
-    height:50px;
-    position: absolute;
-    top:15px;
-    right: 0px;
-    z-index: 2;
-    border-radius: 25px;
+#add-btn{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius:2em; 
+    position: fixed;
+    right: 0.2em;
     background:#fff;
-    border: 0;
     box-shadow: none;
     outline:none; 
-
-    appearance: none;
+    border: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
 } 
 
-
-header button svg {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -8px 0 0 -8px;
-    color: red;
-}
-
-.noFill{
-    fill: none;
-}
-
-.plus{
-    fill: rgb(166, 221, 166)
-}
-
-.container {
-    width: 100%;
-    float: left;
-    padding-right: 150px;
-}
-
 ul{
     list-style: none;
-}
-
-
-ul.todo {
-    width: 100%;
-    float: left;
-}
-
-ul.todo li {
-
-    width: 60%;
-    float: left;
-    height: 50px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
-    margin: 0 0 10px 0;
     position: relative;
-    padding: 0 100px 0 0;
+}
+
+li {
+    
+    width: 80%;
+    height:2em;
+    background: #fff;
+    border-radius: 1.5em;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
-    color: #444;
-    padding: 14px 100px 14px 14px;
-   
-
+    color: rgb(207, 163, 233);
+    padding: 14px 10px 14px 14px;
+    position: relative;
+    margin: 0.5em;
 }
-
-ul.todo li:last-of-type{
-    margin: 0;
-}
-
-ul.todo li .buttons{
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-ul.todo li .buttons button{
-    width: 50px;
-    height: 50px;
-    float: left;
+.remove{
+    width: 3em;
+    height: 3em;
     box-shadow: none;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     background: none;
     border: 0px;
-    position: relative;
     outline: none;
-    cursor: pointer;
-    
-}
-
-ul.todo li .buttons button:last-of-type::before{
-    content: "";
-    width: 1px;
-    height: 30px;
+    cursor: pointer; 
+    position: absolute; 
+    right: 2.5em;
+    top: 0.5em;
+} 
+.fill {
+    width: 1.5em;
+    height: 1.5em;
     position: absolute;
-    top: 10px;
-    left: 0;
-    background: rgb(240, 234, 234);
-}
-
-ul.todo li .buttons button svg {
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top:50%;
-    left: 50%; 
     margin: -11px 0 0 -11px;
-}
+    outline: none;
+} 
 
 .fill{
+    fill:  #c0cecb;
+ }
+ 
+ :hover.fill{
+     fill:rgb(236, 92, 92);
+ }
+
+ :hover.tick {
+    fill: white;
+    background: yellowgreen;
+}
+
+.fill, .tick{
     transition: fill 0.2s ease;
     -webkit-transition: fill 0.2s ease;
     -moz-transition: fill 0.2s ease;
 }
 
-.fill{
-   fill:  #c0cecb;
-}
-
-:hover.fill{
-    fill:red;
-}
-
-ul.todo li .buttons button.remove:hover svg .fill {
-    fill: red;
+.complete {
+    width: 3em;
+    height: 3em;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer; 
+    position: absolute; 
+    right: 0.2em;
+    top: 0.3em;
 }
 
 .tick {
     fill: rgb(166, 221, 166);
-}
-
-:hover.tick {
-    fill: white;
-    background: yellowgreen;
-}
-
-.complete svg {
     border-radius: 18px;
     border: 1.5px solid #c0cecb;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    top:27%;
+    right:0.5em; 
+    outline: none;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 1.5px solid #c0cecb;  
 }
+
+
+li:last-of-type{
+    margin-bottom: 0;
+}  
+
 
 #completed li .buttons button.complete svg{
     background: yellowgreen;
     border: 0px;
     fill: white;
-}
-
- #completed:not(:empty){
-    position: relative;
-    padding: 60px 0 0 0; 
 } 
 
-#completed:not(:empty):before {
-    content: "";
-    width: 150px;
-    height: 1px;
-    background:none;
-    position: absolute;
-    top: 30px;
-    left: 37%;
-    margin: 0 0 0 -75px;
-}
+   #completed:not(:empty){
+    position: relative;
+    padding: 60px 0 0 0; 
+}  
 
 #completed{
     margin-left: 2.2em;
-}
+} 
+
+ 

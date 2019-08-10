@@ -14,20 +14,19 @@
 </head>
 <body>
 
-    <header>
-        <input type="text" placeholder="Enter an activity..." id="item">
-        <button id="add"> 
-            <svg version="1.1" id="plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve"><polygon style="fill:#2488FF;" points="495,227.5 267.5,227.5 267.5,0 227.5,0 227.5,227.5 0,227.5 0,267.5 227.5,267.5 227.5,495 267.5,495 267.5,267.5 495,267.5 "/>
-       </svg></button>
+    <header id="myHeader">
+        <div id="input-add-btn">
+            <input type="text" placeholder="Enter an activity..." id="itemInput">
+            <button id="add-btn"> <svg version="1.1" id="plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve"><polygon style="fill:#2488FF;" points="495,227.5 267.5,227.5 267.5,0 227.5,0 227.5,227.5 0,227.5 0,267.5 227.5,267.5 227.5,495 267.5,495 267.5,267.5 495,267.5 "/></svg>
+            </button>
+        </div> 
     </header>
 
     <div class="container">   
         <!-- uncomplete tasks  -->
         <ul class="todo" id="todo" ></ul>
             <!-- completed tasks -->
-        <ul class="todo" id="completed">
-            
-        </ul>
+        <ul class="todo" id="completed"></ul>
     </div>
     
 
