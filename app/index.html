@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List App</title>
+
+    <!--Roberto font embed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+
+    <!--stylesheets -->
+    <link rel="stylesheet" href="resource\css\style.css">
+</head>
+<body>
+
+    <header>
+        <input type="text" placeholder="Enter an activity..." id="item">
+        <button id="add"> 
+            <svg version="1.1" id="plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve"><polygon style="fill:#2488FF;" points="495,227.5 267.5,227.5 267.5,0 227.5,0 227.5,227.5 0,227.5 0,267.5 227.5,267.5 227.5,495 267.5,495 267.5,267.5 495,267.5 "/>
+       </svg></button>
+    </header>
+
+    <div class="container">   
+        <!-- uncomplete tasks  -->
+        <ul class="todo" id="todo" ></ul>
+            <!-- completed tasks -->
+        <ul class="todo" id="completed">
+            
+        </ul>
+    </div>
+    
+
+
+   <script src="resource\js\main.js"></script> 
+</body>
+</html>
