@@ -20,6 +20,7 @@ body,input,button {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     padding-top: 1.5em;
+    z-index: 5;
     
 }
 
@@ -194,4 +195,7 @@ li:last-of-type{
     margin-left: 2.2em;
 } 
 
- 
+.clearList {
+    display: none;
+}
+
