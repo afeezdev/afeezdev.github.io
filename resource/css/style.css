@@ -81,6 +81,16 @@ header input::-ms-input-placeholder{
     -moz-appearance: none;
 } 
 
+.tasks-heading{
+    font-style: oblique;
+    font-style: italic;
+    text-indent: 3em;
+}
+
+#completed-task {
+    margin-top: 3em;
+}
+
 ul{
     list-style: none;
     position: relative;
@@ -101,6 +111,32 @@ li {
     position: relative;
     margin: 0.5em;
 }
+.edit {
+    position: absolute;
+    right: 5em;
+    width: 2.5em;
+    height: 2.5em;
+    top: 0.9em;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0px;
+    cursor: hand;
+    outline: none;
+    background: none;  
+}
+
+.edit svg {
+    outline: none;
+    fill: rgb(207, 199, 199);
+}
+
+:hover.edit svg {
+    fill:rgb(66, 27, 240);
+}
+    
+
 .remove{
     width: 3em;
     height: 3em;
@@ -179,6 +215,10 @@ li:last-of-type{
     margin-bottom: 0;
 }  
 
+#completed li:last-of-type{
+    margin-bottom: 7.5em;
+}  
+
 
 #completed li .buttons button.complete svg{
     background: yellowgreen;
@@ -188,14 +228,29 @@ li:last-of-type{
 
    #completed:not(:empty){
     position: relative;
-    padding: 60px 0 0 0; 
+    padding: 0 0 0 0; 
 }  
 
 #completed{
     margin-left: 2.2em;
+    margin-bottom: 7em;
 } 
 
 .clearList {
     display: none;
 }
 
+#my-footer{
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgb(38, 152, 228);
+    box-shadow: 0px 2px 4px rgba(44, 62, 88, 0.15);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 1.5em;
+    z-index: 5;
+    text-align: center;
+}
